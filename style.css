@@ -183,6 +183,20 @@ footer{background:var(--text);padding:28px 48px}
 .footer-copy{font-size:13px;color:rgba(255,255,255,.35)}
 .footer-tg{font-size:14px;font-weight:600;color:rgba(255,255,255,.6);transition:color .2s}
 .footer-tg:hover{color:var(--accent)}
+.footer-legal{max-width:1320px;margin:0 auto;padding:14px 0 0;border-top:1px solid rgba(255,255,255,.08);display:flex;gap:24px;flex-wrap:wrap}
+.legal-toggle{background:none;border:none;color:rgba(255,255,255,.35);font-size:12px;font-family:inherit;cursor:pointer;padding:0;transition:color .2s;text-decoration:underline;text-underline-offset:3px}
+.legal-toggle:hover{color:rgba(255,255,255,.7)}
+
+/* ─── LEGAL SECTIONS ────────────────────────────────── */
+.legal-section{display:none;background:var(--bg-light);border-top:3px solid var(--accent)}
+.legal-section.open{display:block}
+.legal-inner{max-width:860px;margin:0 auto;padding:64px 48px 80px;position:relative}
+.legal-close{position:absolute;top:24px;right:48px;background:none;border:1px solid var(--border);border-radius:8px;padding:8px 16px;font-size:13px;font-weight:600;font-family:inherit;cursor:pointer;color:var(--text-mid);transition:all .2s}
+.legal-close:hover{background:var(--text);color:#fff;border-color:var(--text)}
+.legal-inner h2{font-size:28px;font-weight:800;color:var(--text);letter-spacing:-.5px;margin-bottom:8px}
+.legal-inner h3{font-size:16px;font-weight:700;color:var(--text);margin:28px 0 8px}
+.legal-inner p{font-size:15px;color:var(--text-mid);line-height:1.75;margin-bottom:8px}
+.legal-inner a{color:var(--text);font-weight:600;border-bottom:1px solid var(--accent)}
 
 /* ─── CASE PAGES ────────────────────────────────────── */
 .case-header{padding:140px 48px 80px;background:var(--bg-light)}
@@ -275,6 +289,9 @@ footer{background:var(--text);padding:28px 48px}
 
   footer{padding:24px 20px}
   .footer-inner{flex-direction:column;text-align:center;gap:6px}
+  .footer-legal{justify-content:center;padding-top:12px}
+  .legal-inner{padding:48px 20px 64px}
+  .legal-close{right:20px;top:16px}
 
   .case-header{padding:110px 20px 56px}
   .metrics-strip{grid-template-columns:1fr;background:none;gap:0;border:1px solid var(--border)}

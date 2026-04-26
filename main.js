@@ -63,6 +63,24 @@
   els.forEach(function (el) { io.observe(el); });
 })();
 
+/* ── LEGAL SECTIONS ─────────────────────────────────── */
+function toggleLegal(id) {
+  const section = document.getElementById(id);
+  if (!section) return;
+  const isOpen = section.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.legal-section').forEach(function (s) {
+    s.classList.remove('open');
+  });
+  // Open if was closed, scroll to it
+  if (!isOpen) {
+    section.classList.add('open');
+    setTimeout(function () {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
+  }
+}
+
 /* ── SMOOTH ANCHOR SCROLL ───────────────────────────── */
 (function () {
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
